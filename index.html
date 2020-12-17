@@ -1,0 +1,25 @@
+<html>
+<head>
+
+</head>
+<body>
+<input id="numa">
+<input id="numb">
+<button onclick="calculator.add();">+</button>
+<span id="result"></span>
+</body>
+<script>
+
+    let calculator = {
+        a: 0,
+        b: 0,
+        add: () => {
+            this.a = document.getElementById('numa').value;
+            this.b = document.getElementById('numb').value;
+            document.getElementById('result').innerHTML = parseFloat(this.a) + parseFloat(this.b);
+        }
+    }
+
+
+</script>
+</html>
