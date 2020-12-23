@@ -1,25 +1,45 @@
+<!DOCTYPE html>
 <html>
 <head>
-
+    <script src="script.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <title>CALCULATOR</title>
 </head>
 <body>
-<input id="numa">
-<input id="numb">
-<button onclick="calculator.add();">+</button>
-<span id="result"></span>
+<div id="container">
+    <div id="calc">
+        <div id="screen">
+            <div id="history">
+                <p id="history_value"></p>
+            </div>
+            <div id="result">
+                <p id="result_value"></p>
+            </div>
+            <div id="keyboard">
+                <button class="operator" id="clear" onclick="clearV()">C</button>
+                <button class="operator" id="backspace" onclick="backspaceV()">CE</button>
+                <button class="operator" id="%" onclick="inop('%')">%</button>
+                <button class="operator" id="/" onclick="inop('/')">&#247;</button>
+                <button class="number" id="7" onclick="inNum('7')">7</button>
+                <button class="number" id="8" onclick="inNum('8')">8</button>
+                <button class="number" id="9" onclick="inNum('9')">9</button>
+                <button class="operator" id="*" onclick="inop('*')">&times;</button>
+                <button class="number" id="4" onclick="inNum('4')">4</button>
+                <button class="number" id="5" onclick="inNum('5')">5</button>
+                <button class="number" id="6" onclick="inNum('6')">6</button>
+                <button class="operator" id="-" onclick="inop('-')">-</button>
+                <button class="number" id="1" onclick="inNum('1')">1</button>
+                <button class="number" id="2" onclick="inNum('2')">2</button>
+                <button class="number" id="3" onclick="inNum('3')">3</button>
+                <button class="operator" id="+" onclick="inop('+')">+</button>
+                <button class="empty" id="empty"></button>
+                <button class="number" id="0" onclick="inNum('0')">0</button>
+                <button class="empty" id="empty"></button>
+                <button class="operator" id="=" onclick="equal()">=</button>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
-<script>
-
-    let calculator = {
-        a: 0,
-        b: 0,
-        add: () => {
-            this.a = document.getElementById('numa').value;
-            this.b = document.getElementById('numb').value;
-            document.getElementById('result').innerHTML = parseFloat(this.a) + parseFloat(this.b);
-        }
-    }
-
-
-</script>
-</html>
+</html>>
